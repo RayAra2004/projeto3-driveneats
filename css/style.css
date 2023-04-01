@@ -39,14 +39,43 @@ a{
     line-height: 21px;
 }
 
-.produto{
-    width: 172px;
-    height: 216px;
-    background-color: #FFFFFF;
+.produtos{
+    margin-bottom: 16px;
+}
+
+.produtos p:nth-child(1){
+    margin-top: 27px;
+    margin-bottom: 17px;
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    color: #333333;
+}
+
+.lista_produtos{
+    margin-left: 19px;
     display: flex;
+    overflow-x: scroll;
+    height: 200px;
+}
+
+.lista_produtos::-webkit-scrollbar{
+    display: none;
+}
+
+.produto{
+    min-width: 172px;
+    background-color: #FFFFFF;
+    /*display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
+    padding: 10px 0px 0px 10px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    margin-right: 16px;
 }
 
 .nome_prato{
@@ -58,8 +87,8 @@ a{
 }
 
 .produto span{
-    width: 147px;
-    margin: 0 auto 0 auto;
+    display: flex;
+    padding: 0px 15px 0px 0px;
     font-weight: 300;
     font-size: 15px;
     color: #A6A6A6;
@@ -70,4 +99,33 @@ a{
     font-weight: 400;
     color: black;
     margin-top: 5px;
+}
+
+.preco{
+    margin-top: 10px;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 414px;
+    height: 92px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.footer button{
+    width: 364px;
+    height: 61px;
+    background: #CBCBCB;
+    border-radius: 50px;
+    color: #FFFFFF;
+}
+
+.selecionado{
+    border: #32B72F 2px solid;
 }
