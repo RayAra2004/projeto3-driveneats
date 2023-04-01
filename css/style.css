@@ -126,6 +126,6 @@ a{
     color: #FFFFFF;
 }
 
-.selecionado{
-    border: #32B72F 2px solid;
+.pratoSelecionado, .bebidaSelecionada, .sobremesaSelecionada{
+    border: #32B72F 3px solid;
 }
