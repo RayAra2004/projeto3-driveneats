@@ -4,30 +4,51 @@ let sobremesa = '';
 
 function selecionarPrato(produto){
     const jaSelecionado = document.querySelector('.pratoSelecionado');
+    const check = document.querySelector('.pratoHabilitado');
+
     if(jaSelecionado !== null){
         jaSelecionado.classList.remove('pratoSelecionado');
+        check.classList.remove('pratoHabilitado');
+        check.classList.add('pratoDesabilitado');
     }
     produto.classList.add('pratoSelecionado');
+    produto.children[4].classList.remove('pratoDesabilitado');
+    produto.children[4].classList.add('pratoHabilitado');
+
     prato = produto;
-    podePedir();
+    podePedir();   
 }
 
 function selecionarBebida(produto){
     const jaSelecionado = document.querySelector('.bebidaSelecionada');
+    const check = document.querySelector('.bebidaHabilitada');
+
     if(jaSelecionado !== null){
         jaSelecionado.classList.remove('bebidaSelecionada');
+        check.classList.remove('bebidaHabilitada');
+        check.classList.add('bebidaDesabilitada');
     }
     produto.classList.add('bebidaSelecionada');
+    produto.children[4].classList.remove('bebidaDesabilitada');
+    produto.children[4].classList.add('bebidaHabilitada');
+
     bebida = produto;
     podePedir();
 }
 
 function selecionarSobremesa(produto){
     const jaSelecionado = document.querySelector('.sobremesaSelecionada');
+    const check = document.querySelector('.sobremesaHabilitada');
+
     if(jaSelecionado !== null){
         jaSelecionado.classList.remove('sobremesaSelecionada');
+        check.classList.remove('sobremesaHabilitada');
+        check.classList.add('sobremesaDesabilitada');
     }
     produto.classList.add('sobremesaSelecionada');
+    produto.children[4].classList.remove('sobremesaDesabilitada');
+    produto.children[4].classList.add('sobremesaHabilitada');
+
     sobremesa = produto;
     podePedir();
 }
