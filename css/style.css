@@ -72,6 +72,9 @@ a{
     display: none;
 }
 
+.opcao{
+    margin-left: 20px;
+}
 .produto{
     min-width: 172px;
     max-width: 172px;
@@ -156,6 +159,7 @@ img{
     font-size: 20px;
     font-weight: 400;
     text-align: center;
+    border: none;
 }
 
 .pratoSelecionado, .bebidaSelecionada, .sobremesaSelecionada{
@@ -255,11 +259,13 @@ img{
 }
 
 .cancelar{
+    background-color: #50D074;
     color: #FFFFFF;
     position: absolute;
+    background-color: none;
     width: 333px;
     height: 52px;
-    left: 140px;
+    left: 20px;
     bottom: 5px;
     font-family: 'Roboto';
     font-style: normal;
@@ -267,11 +273,13 @@ img{
     font-size: 20px;
     line-height: 23px;
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    border: none;
 }
 
 
 .blur{
-    /*backdrop-filter: blur(2px);*/
+    filter: blur(20px);
 }

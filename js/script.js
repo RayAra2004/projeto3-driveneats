@@ -74,8 +74,9 @@ function confirmarPedido(){
     let valorBebida = Number(bebida.children[3].innerHTML.substring(3).replace(',', '.'));
     let valorSobremesa = Number(sobremesa.children[3].innerHTML.substring(3).replace(',', '.'))
     let valorTotal = (valorPrato + valorBebida + valorSobremesa).toFixed(2);
+    valorTotal = valorTotal.toString().replace('.', ',');
 
-    let textoPedido = `<p>${prato.children[1].innerHTML}</p><p>${valorPrato.toFixed(2)}</p><p>${bebida.children[1].innerHTML}</p><p>${valorBebida.toFixed(2)}</p><p>${sobremesa.children[1].innerHTML}</p><p>${valorSobremesa.toFixed(2)}</p><p>Total:</p><p>R$ ${valorTotal}</p>`
+    let textoPedido = `<p>${prato.children[1].innerHTML}</p><p>${prato.children[3].innerHTML.substring(3)}</p><p>${bebida.children[1].innerHTML}</p><p>${bebida.children[3].innerHTML.substring(3)}</p><p>${sobremesa.children[1].innerHTML}</p><p>${sobremesa.children[3].innerHTML.substring(3)}</p><p>Total:</p><p>R$ ${valorTotal}</p>`
     
     const itens = document.querySelector('.itens');
     itens.innerHTML = textoPedido;
@@ -91,8 +92,6 @@ function fazerPedido(){
     const endereco = prompt('Informe seu endereço:');
     let textoPedido = `Olá, gostaria de fazer o pedido:\n- Prato: ${prato.children[1].innerHTML}\n- Bebida: ${bebida.children[1].innerHTML}\n- Sobremesa: ${sobremesa.children[1].innerHTML}\nTotal: R$ ${valorTotal}\nNome: ${nome}\nEndereço: ${endereco}`
     let textoEncode = encodeURIComponent(textoPedido);
-    console.log(textoPedido);
-    console.log(textoEncode);
 
     window.open(`https://wa.me/5527995273201?text=${textoEncode}`);
 }
